@@ -24,7 +24,7 @@
 
 
 
-  <meta name="keywords" content="瞎扯," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <title> 毕业 // 小乐的blog </title>
+  <title> python字符编码问题 // 小乐的blog </title>
 </head>
 
 <body>
@@ -186,7 +186,7 @@
           
           
             
-              毕业
+              python字符编码问题
             
           
         </h1>
@@ -194,14 +194,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-07-01
+          发表于 2015-03-16
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/日记/">日记</a>
+              <a href="/categories/技术记录/">技术记录</a>
 
               
               
@@ -214,8 +214,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2014/07/01/4/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2014/07/01/4/"></span>
+            <a href="/2015/03/16/python编码/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/16/python编码/"></span>
             </a>
           </span>
           
@@ -229,12 +229,29 @@
       
 
       
-        <p><img src="http://ww1.sinaimg.cn/mw690/657e4e29gw1etii8uwjhsj24002o01l5.jpg" alt="img"></p>
-<blockquote>
-<p>大学校门口集体合照</p>
-</blockquote>
-<hr>
-<p>F和谐k！那一年的这个时候终于毕业滚蛋啦.谈到毕业就想到离别，而我对于离别是不擅长的。往往我是一个旁观者，看着他们热泪盈眶 ，道一声珍重；原谅当初我对你们离去的冷漠，当初觉得天下不过这么屁点大，想去见你们非常方便的，而且对于接下来的3年时间还要呆在这个学校，真的是少了那份离别的感觉，对我来说只不过是一个暑假而已。<br><a id="more"></a><br>然而，并不是这样的，那年暑假过后你们再也没有来学校了。毕业两年，听说有人在体制里面混着，有人出国了，有人开了淘宝店，有人当了村官，有人在跑业务，有人当了教师，有人在家生孩子，有人去了东莞，有人去做了安利；有些人真的是可能这辈子估计再也见不到了，我们各自在自己的地方乞讨着生活的权利，再也没有那份闲暇与冲动的情绪去畅聊感情。别的不谈，希望大家生活都能够过的开心就行！</p>
+        <pre><code>Python字符串编码相关知识
+</code></pre><hr>
+<a id="more"></a>
+<h3 id="Python字符串编码">Python字符串编码</h3><p>字符串在Python内部的表示是<strong><em>unicode</em></strong>编码，因此，在做编码转换时，通常需要以<strong>unicode作为中间编码</strong>，即先将其他编码的字符串解码（decode）成unicode，再从unicode编码（encode）成另一种编码。</p>
+<ul>
+<li><p>decode的作用是将其他编码的字符串转换成unicode编码，如str1.decode(‘gb2312’)，表示将gb2312编码的字符串str1转换成unicode编码。</p>
+</li>
+<li><p>encode的作用是将unicode编码转换成其他编码的字符串，如str2.encode(‘gb2312’)，表示将unicode编码的字符串str2转换成gb2312编码。</p>
+</li>
+</ul>
+<p>因此，转码的时候一定要先搞明白，字符串str是什么编码，然后decode成unicode，然后再encode成其他编码代码中字符串的默认编码与代码文件本身的编码一致。<br>下面例子困扰很久，在做一个爬虫某网站的例子。一般网页编码是<strong>utf-8</strong>，windows终端是<strong>gbk</strong>?</p>
+<pre><code><span class="keyword">if</span> platform.<span class="function"><span class="title">system</span><span class="params">()</span></span> == <span class="string">"Windows"</span>:
+    kw = <span class="function"><span class="title">raw_input</span><span class="params">(<span class="string">"请输入关键字（多个关键字请以空格隔开）:"</span>.decode(<span class="string">"utf-8"</span>)</span></span>.<span class="function"><span class="title">encode</span><span class="params">(<span class="string">"gbk"</span>)</span></span>)
+    kw = kw.<span class="function"><span class="title">decode</span><span class="params">(<span class="string">"gbk"</span>)</span></span>.<span class="function"><span class="title">encode</span><span class="params">(<span class="string">"utf-8"</span>)</span></span>
+</code></pre><p>注意：kw为中文的输入关键字的话，是要提交至你要爬的网页，所以要转换成<strong>utf-8</strong>编码；上面先将已经是<strong>gbk</strong>编码的kw<strong>decode</strong>成Python内部<strong><em>unicode</em></strong>编码，然后再将<strong>unicode</strong>编码<strong>encode</strong>成网页<strong>utf-8</strong>编码的字符串。</p>
+<h3 id="字符编码知识梳理">字符编码知识梳理</h3><p>UTF-8就是在互联网上使用最广的一种Unicode的实现方式;以下两点是UTF-8的编码规则</p>
+<ul>
+<li>1）对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。</li>
+</ul>
+<ul>
+<li>2) 对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</li>
+</ul>
+<p>综上：解读UTF-8编码非常简单。如果一个字节的第一位是0，则这个字节单独就是一个字符；如果第一位是1，则连续有多少个1，就表示当前字符占用多少个字节。</p>
 
       
     </div>
@@ -243,7 +260,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/瞎扯/"> #瞎扯 </a>
+            <a href="/tags/python/"> #python </a>
           
         </div>
       
@@ -252,13 +269,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/08/03/vim命令备忘录/">vim命令备忘录</a>
+              <a href="/2015/04/05/2/">球状闪电</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/07/01/8/">波兰来客</a>
+              <a href="/2015/03/10/python 编码规范/">PEP8 Python 编码规范</a>
             
           </div>
         </div>
@@ -301,8 +318,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2014/07/01/4/"
-               data-title="毕业" data-url="http://guxiaole.github.io/2014/07/01/4/">
+          <div class="ds-thread" data-thread-key="2015/03/16/python编码/"
+               data-title="python字符编码问题" data-url="http://guxiaole.github.io/2015/03/16/python编码/">
           </div>
         
       </div>
@@ -415,7 +432,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python字符串编码"><span class="nav-number">1.</span> <span class="nav-text">Python字符串编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符编码知识梳理"><span class="nav-number">2.</span> <span class="nav-text">字符编码知识梳理</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

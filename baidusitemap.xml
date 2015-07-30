@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://guxiaole.github.io/2015/03/16/python%E7%BC%96%E7%A0%81/</loc>
+    <lastmod>2015-07-30T04:28:15.750Z</lastmod>
+    <data>
+        <display>
+        <title>python字符编码问题</title>
+        <pubTime>2015-03-15T16:00:00.000Z</pubTime>
+        
+        <tag>python </tag>
+         
+         
+           
+             
+              <breadCrumb title="技术记录" url="http://guxiaole.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://guxiaole.github.io/2015/04/05/2/</loc>
