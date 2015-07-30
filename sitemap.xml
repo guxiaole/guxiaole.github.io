@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://guxiaole.github.io/README.html</loc>
+    <lastmod>2015-07-30T03:52:28.468Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guxiaole.github.io/2015/04/05/2/</loc>
+    <lastmod>2015-07-30T03:39:41.671Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://guxiaole.github.io/2015/03/10/python%20%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2015-07-23T13:33:22.890Z</lastmod>
   </url>
@@ -52,11 +62,6 @@
   </url>
   
   <url>
-    <loc>http://guxiaole.github.io/2015/04/05/2/</loc>
-    <lastmod>2015-07-23T13:25:41.093Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://guxiaole.github.io/2014/08/03/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</loc>
     <lastmod>2015-07-23T13:25:07.078Z</lastmod>
   </url>
@@ -94,11 +99,6 @@
   <url>
     <loc>http://guxiaole.github.io/search/index.html</loc>
     <lastmod>2015-07-02T03:32:44.511Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://guxiaole.github.io/2015/07/02/give/</loc>
-    <lastmod>2015-07-02T03:09:55.527Z</lastmod>
   </url>
   
   <url>
