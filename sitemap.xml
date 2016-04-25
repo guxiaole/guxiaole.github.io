@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://guxiaole.github.io/about/index.html</loc>
+    <lastmod>2016-04-25T14:18:16.495Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://guxiaole.github.io/2016/04/13/zjj/</loc>
     <lastmod>2016-04-19T03:11:23.651Z</lastmod>
   </url>
@@ -24,11 +29,6 @@
   <url>
     <loc>http://guxiaole.github.io/404/index.html</loc>
     <lastmod>2015-11-14T07:33:01.859Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://guxiaole.github.io/about/index.html</loc>
-    <lastmod>2015-10-08T09:08:46.390Z</lastmod>
   </url>
   
   <url>
