@@ -24,7 +24,7 @@
 
 
 
-  <meta name="keywords" content="了解飞行," />
+  <meta name="keywords" content="技术记录," />
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <title> 飞行之升力 // 小乐的酱油瓶 </title>
+  <title> 深入理解计算机系统读书笔记系列之第一章 // 小乐的酱油瓶 </title>
 </head>
 
 <body>
@@ -186,7 +186,7 @@
           
           
             
-              飞行之升力
+              深入理解计算机系统读书笔记系列之第一章
             
           
         </h1>
@@ -194,14 +194,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2016-05-27
+          发表于 2017-02-09
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/航空常识/">航空常识</a>
+              <a href="/categories/技术记录/">技术记录</a>
 
               
               
@@ -214,8 +214,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2016/05/27/shengli/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/27/shengli/"></span>
+            <a href="/2017/02/09/计算机系统笔记chap1/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/计算机系统笔记chap1/"></span>
             </a>
           </span>
           
@@ -229,19 +229,22 @@
       
 
       
-        <p><img src="http://7xk15u.com1.z0.glb.clouddn.com/%E7%AB%B9%E8%9C%BB%E8%9C%93.jpg" alt="IMG"></p>
-<p>升力是如何产生的?<br><a id="more"></a></p>
-<p>流体力学的基本原理告诉我们，<strong>流动慢的大气压强较大，而流动快的大气压强较小</strong>。日常的生活经验告诉我们，当水流以一个相对稳定的流量流过河床时，在河面较宽的地方流速慢，在河面较窄的地方流速快。流过机翼的气流与河床中的流水类似，由于机翼一般是不对称的，上表面比较凸，而下表面比较平，流过机翼上表面的气流就类似于较窄地方的流水，流速较快，而流过机翼下表面的气流正好相反，类似于较宽地方的流水，流速较上表面的气流慢。根据流体力学的基本原理，流动慢的大气压强较大，而流动快的大气压强较小，这样机翼下表面的压强就比上表面的压强高，换一句话说，就是大气施加与机翼下表面的压力(方向向上)比施加于机翼上表面的压力(方向向下)大，二者的压力差便形成了飞机的升力。<br>对于通常所说的<strong>飞机</strong>，都是需要助跑，当飞机的速度达到一定大小时，飞机两翼所产生的升力才能抵消重力，从而实现飞行。</p>
-<blockquote>
-<p>飞机，直升机和旋翼机三种起飞原理是不同的。</p>
+        <blockquote>
+<p>此系列记录 《深入理解计算机系统》一书笔记</p>
 </blockquote>
-<ul>
-<li>飞机依靠助跑来提供速度以达到足够的升力;</li>
-<li><p>直升机依靠旋翼的控制旋转在不进行助跑的条件下实现垂直升降，直升机的旋转是动力系统提供的，而旋翼旋转会产生向上的升力和空气给旋翼的反作用力矩，在设计中需要提供平衡旋翼反作用扭矩的方法，通常有单旋翼加尾桨式（尾桨通常是垂直安装）、双旋翼纵列式（旋转方向相反以抵消反作用扭矩）等；</p>
-</li>
-<li><p>而<strong>旋翼机</strong>则介于飞机和直升机之间，旋翼机的旋翼不与动力系统相连，由飞行过程中的前方气流吹动旋翼旋转产生升力（像大风车一样），即旋翼为自转式，传递到机身上的扭矩很小，无需专门抵消。</p>
-</li>
+<a id="more"></a>
+<h3 id="关于bit、byte、word关系">关于bit、byte、word关系</h3><ul>
+<li>bit （位）<br>0或者1组成的位</li>
+<li>byte（字节）<br>8个<strong><strong>位</strong></strong>组成称为一个<strong>字节</strong></li>
+<li>word（字）<br>4个字节组成的机器字长称为32位系统<br>8个字节组成的机器字长称为64位系统</li>
 </ul>
+<h3 id="操作系统中进程、文件、虚拟存储器">操作系统中进程、文件、虚拟存储器</h3><ul>
+<li>进程：是对处理器、主存和 I/O 设备的抽象表示 </li>
+<li>文件： 是对I/O 设备的抽象表示<br>字节序列，I/O 设备包括磁盘、键盘、显示器、网络（<strong>从系统角度来看，网络可示为一个I/O设备</strong>）都能示为文件。可以调用统一的系统函数实现文件的读写，屏蔽了底层硬件细节。</li>
+<li>虚拟存储器：对主存和磁盘 I/O 设备的抽象</li>
+</ul>
+<p>（以上：<strong><em>挺新颖的解释</em></strong>）</p>
+<h3 id="运行速度比较">运行速度比较</h3><p>寄存器&gt; 高速缓存SRAM&gt;主存DRAM &gt;本地磁盘 &gt;Web服务器</p>
 
       
     </div>
@@ -250,7 +253,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/了解飞行/"> #了解飞行 </a>
+            <a href="/tags/技术记录/"> #技术记录 </a>
           
         </div>
       
@@ -259,13 +262,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/28/2016books/">2016阅读</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/26/计算机系统笔记chap1/">深入理解计算机系统读书笔记系列之第一章</a>
+              <a href="/2017/02/09/shengli/">飞行之升力</a>
             
           </div>
         </div>
@@ -308,8 +309,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2016/05/27/shengli/"
-               data-title="飞行之升力" data-url="http://guxiaole.github.io/2016/05/27/shengli/">
+          <div class="ds-thread" data-thread-key="2017/02/09/计算机系统笔记chap1/"
+               data-title="深入理解计算机系统读书笔记系列之第一章" data-url="http://guxiaole.github.io/2017/02/09/计算机系统笔记chap1/">
           </div>
         
       </div>
@@ -418,7 +419,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于bit、byte、word关系"><span class="nav-number">1.</span> <span class="nav-text">关于bit、byte、word关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统中进程、文件、虚拟存储器"><span class="nav-number">2.</span> <span class="nav-text">操作系统中进程、文件、虚拟存储器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行速度比较"><span class="nav-number">3.</span> <span class="nav-text">运行速度比较</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -436,7 +437,7 @@
         <div class="copyright">
   
   &copy; &nbsp;  2013 - 
-  2016
+  2017
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>
